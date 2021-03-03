@@ -26,4 +26,6 @@ for i in range(0, iterations):
 
 for key, total in samples.items():
   if (abs((total/iterations) - float(key)) < 0.01):
-    print("%s is close to correct at %f" % (str(round(key, 2)), (total / iterations)))
+    print("%s is within 1%% correct: %f" % (str(round(key, 2)), (total / iterations)))
+  else:
+    print("%s is incorrect: %f" % (str(round(key, 2)), (total / iterations)))
